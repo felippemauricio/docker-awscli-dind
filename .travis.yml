@@ -12,9 +12,13 @@ jobs:
       script:
         - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
         - docker build -t $IMAGE_NAME .
-        - docker tag $IMAGE_NAME $IMAGE_NAME:$TRAVIS_COMMIT
-        - docker push $IMAGE_NAME:$TRAVIS_COMMIT
-        - docker tag $IMAGE_NAME $IMAGE_NAME:latest
-        - docker push $IMAGE_NAME:latest
+        - export IMAGE_NAME_VERSION_1="$IMAGE_NAME:$TRAVIS_COMMIT"
+        - echo $IMAGE_NAME_VERSION_1
+        - docker tag $IMAGE_NAME $IMAGE_NAME_VERSION_1
+        - docker push IMAGE_NAME_VERSION_1
+        - export IMAGE_NAME_VERSION_2="$IMAGE_NAME:latest"
+        - echo $IMAGE_NAME_VERSION_2
+        - docker tag $IMAGE_NAME $IMAGE_NAME_VERSION_2
+        - docker push $IMAGE_NAME_VERSION_2
       on:
         branch: master
