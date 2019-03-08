@@ -12,8 +12,6 @@ jobs:
       script:
         - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
         - docker build -t $IMAGE_NAME .
-        - docker tag $IMAGE_NAME "$IMAGE_NAME:$TRAVIS_COMMIT"
-        - docker push "$IMAGE_NAME:$TRAVIS_COMMIT"
         - docker tag $IMAGE_NAME $IMAGE_NAME:latest
         - docker push $IMAGE_NAME:latest
       on:
