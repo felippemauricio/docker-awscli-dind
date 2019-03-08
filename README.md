@@ -5,7 +5,7 @@
 
 Containerized Docker-In-Dind + AWS CLI on alpine to avoid requiring the aws cli to be installed on CI machines.
 
-![](https://raw.githubusercontent.com/felippemauricio/docker-awscli-dind/master/docs/images/aws-docker.png)
+![](https://raw.githubusercontent.com/felippemauricio/docker-awscli-dind/master/docs/images/dind-aws.jpg)
 
 ## How to pull the docker image?
 
