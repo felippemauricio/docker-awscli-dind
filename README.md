@@ -1,6 +1,7 @@
 # Docker-In-Docker + awscli
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/felippemauricio/docker-awscli-dind/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/felippemauricio/docker-awscli-dind.svg?branch=master)](https://travis-ci.org/felippemauricio/docker-awscli-dind)
+[![Docker Hub](https://img.shields.io/badge/Docker%20Hub-awscli--dind-blue.svg)](https://hub.docker.com/r/felippemauricio/awscli-dind)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/felippemauricio/awscli-dind/pulls)
 
 Containerized Docker-In-Dind + AWS CLI on alpine to avoid requiring the aws cli to be installed on CI machines.
